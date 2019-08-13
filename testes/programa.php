@@ -8,12 +8,13 @@
 <body>
 <?php
 	$hora =  date('H:m:s');
+	$minuto = date('m');
+	$segundo = date('s');
+	/*Teste
+	
+	echo "$minutos<br/>";
 
-	/*Teste*/
-	$minutos = date('m');
-	echo "<br/>$minutos";
-
-	/*Fim teste*/
+	Fim teste*/
 
 	echo "$hora";
 
@@ -22,7 +23,7 @@
 	}
 	else if ($hora >= 12 && $hora < 18 ) {
 		echo "<br/> Turno da tarde";
-	} elseif ($hora >= 18 && $hora <= 23) {
+	} else if ($hora >= 18 && $hora <= 23 && $minuto <= 59 && $segundo <= 59) {
 		echo "<br/> Turno da noite";
 	}
 
